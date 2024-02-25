@@ -63,5 +63,20 @@ namespace Snake
             Position pos = empty[random.Next(empty.Count)];
             Grid[pos.Row, pos.Col] = GridValue.Food;
         }
+
+        public Position HeadPosition()
+        {
+            return snakePositions.First.Value;
+        }
+
+        public Position TailPosition()
+        {
+            return snakePositions.Last.Value;
+        }
+
+        public IEnumerable<Position> SnakePositions()
+        {
+            return snakePositions;
+        }
     }
 }
